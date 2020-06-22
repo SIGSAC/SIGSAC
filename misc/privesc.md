@@ -1,0 +1,1 @@
+https://github.com/1N3/PrivEsc/blob/master/linux/scripts/linux_privesc.sh
