@@ -36,6 +36,7 @@ Open a browser tab, and navigate to `http://localhost` in the search bar, and yo
 
 ### **Pre-reqs**
 
+
 - Before configuring IIS, we need to create a directory to host our website files. Open File Explorer, navigate to `This PC`, `Windows (C:)`, then create a new folder named `Websites`. Inside of that folder, create a new folder named `MyWebsite`. All your website files will live inside of this directory.
 
 
