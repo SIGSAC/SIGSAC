@@ -11,9 +11,9 @@
 2. [Creating your first website](#Creating-our-first-website)
     1. [Pre-reqs](#Pre-reqs)
     2. [Configure your website](Configure-your-website)
-      1. [Disable the default code](#Disable-the-default-code)
-      2. [Add the code](#Add-the-code)
-      3. [Host the site](#Host-the-site)
+        1. [Disable the default code](#Disable-the-default-code)
+        2. [Add the code](#Add-the-code)
+        3. [Host the site](#Host-the-site)
 3. [Additional Info](#Additional-info)
 4. [Uninstalling IIS](#Uninstalling-IIS)
 
