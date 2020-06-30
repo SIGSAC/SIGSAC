@@ -14,7 +14,7 @@
       1. [Disable the default code](#Disable-the-default-code)
       2. [Add the code](#Add-the-code)
       3. [Host the site](#Host-the-site)
-3. [Troubleshooting](#Troubleshooting)
+3. [Additional Info](#Additional-info)
 4. [Uninstalling IIS](#Uninstalling-IIS)
 
 ## **IIS**
@@ -75,7 +75,35 @@ All that is left is for you to replace the default html code with your own code.
 
 #### Add your own code
 3. Copy and paste the following code into a text editor, and then save it as "index.html" in `C:\Websites\MyWebsite`. You can also find the code [here](https://github.com/SIGSAC/SIGSAC/blob/master/5.%20Your%20Very%20Own%20Website/Exercise/assets/files/index.html)
+```
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>My First Website</title>
+    <style type="text/css">
+        body {
+            background:#FFFFFF;
+        	color:#000000;
+        	margin:0;
+        }
+        #container {
+        	margin-left:auto;
+        	margin-right:auto;
+        	text-align:center;
+            font-family:'Segoe UI';
+        	}
+    </style>
+</head>
 
+<body>
+    <div id="container">
+        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.armytimes.com%2Fresizer%2FCCCtdHx6iccA2LtRS6PXkOzMf0M%3D%2F1200x0%2Ffilters%3Aquality(100)%2Farc-anglerfish-arc2-prod-mco.s3.amazonaws.com%2Fpublic%2FA2J7HRJTCVD77DBABMYNZBY2CM.jpg&f=1&nofb=1" height='300'>
+        <h1>Go Army, Beat Navy!</h1>
+    </div>
+</body>
+
+</html>
+```
 | Step 3 |
 | :-: |
 |  <img src="assets/images/websitecode.png" width="500"> |
@@ -95,7 +123,7 @@ All that is left is for you to replace the default html code with your own code.
 
 ## **Additional Info**
 - You can save your html files anywhere on the computer. It doesn't need to be in `C:\Websites\MyWebsite`
-- Your website is hosted locally (AKA localhost). That means only your computer can see it, no other device. 
+- Your website is hosted locally (AKA localhost). That means only your computer can see it, no other device.
 
 ## **Uninstalling IIS**
 If you ever need to uninstall IIS, these are the steps
