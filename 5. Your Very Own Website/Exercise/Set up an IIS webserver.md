@@ -116,6 +116,7 @@ All that is left is for you to replace the default html code with your own code.
 | <img src="assets/images/IISSites.png" width="500"> | <img src="assets/images/IISAddSiteFilled.png" width="500"></img> |
 
 6. Navigate to `http://localhost` once more and you should see your new website. Congrats!
+
 | Step 6 |
 | :-: |
 | <img src="assets/images/localhostwebsitepng.png" width="500"> |
