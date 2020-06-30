@@ -8,7 +8,7 @@
     1. [Background](#Background)
     1. [Installing IIS](#Installing-IIS)
     1. [Checking installation](#Checking-installation)
-2. [Creating our first website](#Creating-our-first-website)
+2. [Creating your first website](#Creating-our-first-website)
     1. [Pre-reqs](#Pre-reqs)
     2. [Making the site](#Making-the-site)
 3. [Troubleshooting](#Troubleshooting)
@@ -28,7 +28,9 @@ Websites are comprised of code (html, css, python etc). In order to convert the 
 2.  Scroll to find `Internet Information Services`.
 3.  Make sure the `Internet Information Services` box is checked. `FTP Server` should not be checked, but `Web Management Tools` and `World Wide Web Services` should be.
 
-<img align="center" src="assets/images/windowsfeatures.png" width="400"></img>
+| Step 3 |
+| :-: |
+| <img src="assets/images/windowsfeatures.png" width="400"> |
 
 4.  Press OK, and reboot computer.
 
@@ -36,19 +38,25 @@ Websites are comprised of code (html, css, python etc). In order to convert the 
 
 Open a browser tab, and navigate to `http://localhost` in the search bar, and you should be met with a blue webpage shown below.
 
-
-<p align="center"><img src="assets/images/iisstart.png" width="400"></p>
-
-
-## **Creating our first website**
-
-### **Pre-reqs**
+| Check to see IIS is running |
+| :-: |
+| <img src="assets/images/iisstart.png" width="400"> |
 
 
-- Before configuring IIS, we need to create a directory to host our website files. Open File Explorer, navigate to `This PC`, `Windows (C:)`, then create a new folder named `Websites`. Inside of that folder, create a new folder named `MyWebsite`. All your website files will live inside of this directory.
 
+## **Creating your first website**
+Now that you have your webserver, you can upload the code for your website! But first...
+### Pre-reqs
+Before configuring the IIS software, you need to create a directory (folder) to host your website code.
+1. Open File Explorer
+2. Navigate to `This PC`, then `Windows (C:)`
+3. Create a new folder named `Websites`. Inside of that folder, create a new folder named `SIGSAC_Site_1`
 
-<p align="center"><img src="assets/images/windowdir.png" ="400"><img src="assets/images/windowsnewfolder.png" width="400"></p>
+All your website files will live inside of this directory.
+
+| Step 1 | Step 2 |
+| :-: | :-: |
+| <img src="assets/images/windowdir.png" width="500"> | <img src="assets/images/windowsnewfolder.png" width="500"> |
 
 
 ### **Making the site**
