@@ -12,15 +12,15 @@
 
 
 <figure>
-  <img src="pictures/Computers 101/Linux-Boot-Process.png" alt="my alt text"/>
+  <img src="assets/Computers 101/Linux-Boot-Process.png" alt="my alt text"/>
   <figcaption>Figure 1. Boot Process</figcaption>
 </figure>
 
 ### Phase 1: [BIOS/System Start](#BIOS)
 1. BIOS conducts [POST](#POST) test to check hardware is working. Background process you won't see.
-2. Looks for an[MBR](#MBR) to determine what OS and from where to boot. Background process you won't see.
-### Phase 2: [MBR loading &GRUB Bootloader](#Bootloader)
-3. The MBR runs the bootloader which loads the rest of the [OS](#OS). Linux typically uses GRUB.
+2. Looks for an [MBR](#MBR) or [GPT](#GPT) to determine what OS is loaded and from where to boot. Background process you won't see.
+### Phase 2: [MBR loading & GRUB Bootloader](#Bootloader)
+3. The MBR runs the bootloader which loads the rest of the [OS](#OS). Linux typically uses GRUB
 ### Phase 3: Kernel
 4. 
 
@@ -41,6 +41,10 @@ Code that loads the OS
 **Basic Input Output System**\
 Firmware (Software that provides low level control over device hardware) First program to run which kickstarts the boot process
 
+### GPT
+**GUID Partition Table**\
+New standard replacing MBR, usually 512 byte section that contains the bootloader information.
+
 ### GRUB
 **GRand Unified Bootloader**\
 First software that starts at system boot; GRUB loads the Linux kernel
@@ -51,7 +55,8 @@ The first
 
 ### MBR
 **Master Boot Record**\
-512 byte section of the first sector on a disk that contains the bootloader information
+512 byte section of the first sector on a disk that contains the bootloader information.\
+MBR only works with disks up to 2 TB in size.
 
 ### POST
 **Power-on self-test**\
@@ -62,10 +67,10 @@ Process run by BIOS to check hardware like memory, disk drives and that it works
 As name implies. Little to no [volatility](#volatility)
 
 ### **RAM**
-**Random Access Memory**\
+**Random Access Memory**
 * When a program runs, it performs a lot of mathematical calculations to move bits around. RAM provides an area to store all those bits.
 * Older machines had 2-4GB RAM. Cadet laptops have 32GB RAM
-* 
+* RAM does not have persistence, a reboot or loss of power WILL cause the RAM to lose all content.
 * High [volatility](#volatility)
 
 ### **CPU**
@@ -78,7 +83,7 @@ How easily/quickly it changes
 **Operating System**\
 System software that manages computer hardware, software, and more. Ones you may be familiar with:
 
-|  |  |  |
+| Windows | Linux | MacOS | 
 | - | - | - |
 | Windows XP | Ubuntu | High Sierra |
 | Windows 7 | CentOS | Mojave |
@@ -94,15 +99,13 @@ System software that manages computer hardware, software, and more. Ones you may
 * Cluster - Group of track sectors (Green Portion)
 
 <figure>
-  <img src="pictures/Computers 101/Hard Disk.jpg" alt="my alt text"/>
+  <img src="assets/Computers 101/Hard Disk.jpg" alt="my alt text"/>
   <figcaption>Figure 1. Boot Process</figcaption>
 </figure>
 
 ### Solid State Disk
-
-
 <figure>
-  <img src="pictures/Computers 101/HDDvsSSD.png" alt="my alt text"/>
+  <img src="assets/Computers 101/HDDvsSSD.png" alt="my alt text"/>
   <figcaption>Figure 1. Boot Process</figcaption>
 
 [Linux Boot Process](https://www.youtube.com/watch?v=mHB0Z-HUauo)
@@ -118,3 +121,7 @@ Plug in the usb containing the second image you want to dual boot\
 THe windows boot loader will show you all the unallocated space available for you to use.\
 Go through the remaining OS download process\
 Fix your boot loader to accomodate for two machines\
+
+
+## Resources and links used
+https://www.howtogeek.com/193669/whats-the-difference-between-gpt-and-mbr-when-partitioning-a-drive/
