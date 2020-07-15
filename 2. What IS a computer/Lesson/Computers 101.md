@@ -1,7 +1,8 @@
 <link rel="stylesheet" type="text/css" href="Computers 101.css">
 
 # Computers 101
-## *Learn the fundamentals of computers and Operating Systems*
+## *Learn the fundamentals of computers and Operating Systems (OS)*
+### *Written by 43y3s and PillowFood*
 
 ## Table of Contents
 1. [Boot Process](#Boot-Process)
@@ -26,7 +27,8 @@
 ### Phase 5: User Prompt
 6. The user prompt is the final level of the boot process. This is the terminal or CMD prompt that you see and can interact with. In modern OS's, this is known as the GUI (graphical user interface), providing a safe and easy method of interacting with the computer.
 
-[Video Explanation](https://www.youtube.com/watch?v=mHB0Z-HUauo)
+[Video Explanation](https://www.youtube.com/watch?v=mHB0Z-HUauo)\
+[openSUSE documentation explaining the linux boot process in-depth](https://www.pks.mpg.de/~mueller/docs/suse10.2/html/opensuse-manual_en/manual/cha.boot.html#sec.boot.proc)
 
 ## Terminology
 
@@ -37,22 +39,22 @@
 * Code that loads the OS
 
 ### BIOS
-**Basic Input Output System**
+*Basic Input Output System*
 * Firmware (Software that provides low level control over device hardware) First program to run which kickstarts the boot process
 
 ### GPT
-**GUID Partition Table**
+*GUID Partition Table*
 * New standard replacing MBR, usually 512 byte section that contains the bootloader information.
 
 ### GRUB
-**GRand Unified Bootloader**
+*GRand Unified Bootloader*
 * First software that starts at system boot; GRUB loads the Linux kernel
 
 ### INIT
 * Process with process ID 1, started by the kernel, and resists signal 9 (kills processes). All other programs are either started by init or by its child processes.
 
 ### initrd
-**"initial ramdisk"**
+*"initial ramdisk"*
 * The first 
 
 ### Kernel
@@ -60,7 +62,7 @@
 * Allows for interface between user and system components
 
 ### MBR
-**Master Boot Record**
+*Master Boot Record*
 * 512 byte section of the first sector on a disk that contains the bootloader information.
 * MBR only works with disks up to 2 TB in size.
 
@@ -69,22 +71,22 @@
 * Emulates a separate physical device.
 
 ### POST
-**Power-on self-test**
+*Power-on self-test*
 * Process run by BIOS to check hardware like memory, disk drives and that it works properly.
 
 ### **ROM**
-**Read-only memory**
+*Read-only memory*
 * As name implies. Little to no [volatility](#volatility)
 
 ### **RAM**
-**Random Access Memory**
+*Random Access Memory*
 * When a program runs, it performs a lot of mathematical calculations to move bits around. RAM provides an area to store all those bits.
 * Older machines had 2-4GB RAM. Cadet laptops have 32GB RAM
 * RAM does not have persistence, a reboot or loss of power WILL cause the RAM to lose all content.
 * High [volatility](#volatility)
 
 ### **CPU**
-**Central Processing Unit**
+*Central Processing Unit*
 * The brain of the computer. 
 * Proccesses input, stores data, and outputs results
 * Basically a hodge-podge of circuits, logic gates, and transistors
@@ -92,9 +94,8 @@
 ### **Volatility**
 * How easily/quickly it changes
 
-
 ### **OS**
-**Operating System**
+*Operating System*
 * System software that manages computer hardware, software, and more. Ones you may be familiar with:
 
 | Windows | Linux | MacOS | 
@@ -104,8 +105,8 @@
 | Windows 10 | Kali | Catalina |
 
 
-### HDD
-**Hard Drive Disk**
+### **HDD**
+*Hard Drive Disk*
 * Platter - The disk as a whole
 * Track - A single ring on the platter (Red Ring)
 * (Geometrical) Sector - Looks like the mathematical version of a sector (Blue Portion)
@@ -117,17 +118,23 @@
   <figcaption>Figure 1. Boot Process</figcaption>
 </figure>
 
-### Solid State Disk
+### **SSD**
+**Solid State Drive**
+* Controller - basic processor that executes firmware-level software
+* NAND Flash memory - The physical storage area, but does not rely on mechanical parts
+* Cache - temporary storage of data on solid-state drives (SSDs) to improve data access times and boost storage system performance.
+
 <figure>
 <img src="assets/Computers 101/HDDvsSSD.png" alt="A visual comparision of a Hard Disk Drive vs a Solid State Drive"/>
 <figcaption>Figure 3. HDD vs SSD</figcaption>
+</figure>
 
 [Linux Boot Process](https://www.youtube.com/watch?v=mHB0Z-HUauo)
 
 [GRUB boot loader](https://askubuntu.com/questions/347203/what-exactly-is-grub)
 
-## How to dual boot (DO NOT DO THIS ON YOUR CADET LAPTOP)
-***DO NOT DO THIS TO YOUR CADET LAPTOP***
+## How to dual boot 
+- ***DO NOT DO THIS TO YOUR CADET LAPTOP, SERIOUSLY, I WILL NOT BE ABLE TO RECOVER YOUR DATA***
 - Boot from an ubuntu usb in live mode
 - Using the Ubuntu's built in partition tool, unmount Normal ubnutu machine from the computer.
 - If the ubuntu machine is using the full machine, resize the ubuntu machine to use only half.
@@ -137,13 +144,14 @@
 - Go through the remaining OS download process
 - Fix your boot loader to accomodate for two machines
 
-
 ## Resources and links used
 
-https://www.howtogeek.com/193669/whats-the-difference-between-gpt-and-mbr-when-partitioning-a-drive/
-
-https://www.khanacademy.org/computing/computers-and-internet#xcae6f4a7ff015e7d:computers
-
-https://afteracademy.com/blog/what-is-kernel-in-operating-system-and-what-are-the-various-types-of-kernel
-
-https://www.pks.mpg.de/~mueller/docs/suse10.2/html/opensuse-manual_en/manual/sec.boot.init.html
+| What is the resource? | Link | 
+| - | - | 
+| howtogeek guide on GPT and MBR when partitioning drives | https://www.howtogeek.com/193669/whats-the-difference-between-gpt-and-mbr-when-partitioning-a-drive/ | 
+| Khan Academy overarching guide on computers | https://www.khanacademy.org/computing/computers-and-internet#xcae6f4a7ff015e7d:computers | 
+| After Academy guide on what a kernel is | https://afteracademy.com/blog/what-is-kernel-in-operating-system-and-what-are-the-various-types-of-kernel | 
+| openSUSE documentation/writeup on how init works | https://www.pks.mpg.de/~mueller/docs/suse10.2/html/opensuse-manual_en/manual/sec.boot.init.html | 
+| AskUbuntu answers what exactly is a grub | https://askubuntu.com/questions/347203/what-exactly-is-grub | 
+| Linux Boot Process video | https://www.youtube.com/watch?v=mHB0Z-HUauo | 
+| How to create your own OS | http://mikeos.sourceforge.net/write-your-own-os.html | 
